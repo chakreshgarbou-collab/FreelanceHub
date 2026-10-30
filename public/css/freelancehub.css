@@ -303,3 +303,33 @@ h4 { font-size: 16px; font-weight: 600; }
     .stat-grid { grid-template-columns: repeat(2, 1fr); }
     .dash-layout { grid-template-columns: 1fr; }
 }
+
+/* ---------- Client dashboard ---------- */
+.stat-top { display: flex; justify-content: space-between; align-items: center; }
+.stat-icon { width: 28px; height: 28px; border-radius: 6px; background: var(--surface); display: grid; place-items: center; font-size: 14px; }
+.stat-hint { color: var(--slate-400); font-size: 11px; }
+.stat-card .stat-big { font: 700 26px 'DM Sans', sans-serif; margin: 12px 0 2px; }
+.tabs-card { padding: 0; overflow: hidden; }
+.line-tabs { display: flex; border-bottom: 1px solid var(--border); padding: 0 8px; }
+.line-tabs button {
+    border: 0; background: none; padding: 12px 14px; cursor: pointer;
+    font: 500 14px 'Inter', sans-serif; color: var(--slate-500);
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.line-tabs button.active { color: var(--indigo); border-bottom-color: var(--indigo); }
+.quick-list { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.quick-list a {
+    display: flex; justify-content: space-between; align-items: center; padding: 9px 12px;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    color: var(--slate-700); text-decoration: none; font-size: 13px;
+}
+.quick-list a:hover { border-color: var(--indigo); color: var(--indigo); }
+.spend-row { margin-top: 14px; }
+.spend-head { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+.bar { height: 6px; background: #f1f5f9; border-radius: 999px; overflow: hidden; }
+.bar span { display: block; height: 100%; border-radius: 999px; }
+.promo { background: var(--gradient-primary); color: #fff; border-radius: 12px; padding: 22px; }
+.promo .overline { color: rgba(255, 255, 255, .7); }
+.promo h4 { color: #fff; margin: 4px 0 8px; }
+.promo p { color: rgba(255, 255, 255, .85); font-size: 13px; margin: 0 0 14px; }
+.promo a { display: inline-block; background: rgba(255, 255, 255, .2); color: #fff; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-size: 13px; }
