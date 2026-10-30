@@ -13,7 +13,7 @@ Route::get('/', function () {
 Route::get('/freelancers/{freelancerProfile}', [FreelancerProfileController::class, 'show']);
 Route::get('/clients/{clientProfile}', [ClientProfileController::class, 'show']);
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', \App\Http\Middleware\NoIndex::class])->group(function () {
 
     Route::get('/dashboard', function () {
         $user = auth()->user();
