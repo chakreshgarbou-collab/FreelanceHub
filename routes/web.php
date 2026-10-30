@@ -7,7 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Freelancer profile pages (only for logged-in users)
+// PUBLIC freelancer profile (no login needed)
+Route::get('/freelancers/{freelancerProfile}', [FreelancerProfileController::class, 'show']);
+
+// PRIVATE profile pages (only for logged-in users)
 Route::middleware('auth')->group(function () {
     Route::get('/freelancer/profile/edit', [FreelancerProfileController::class, 'edit']);
     Route::put('/freelancer/profile', [FreelancerProfileController::class, 'update']);
