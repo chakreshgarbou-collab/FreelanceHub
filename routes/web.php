@@ -35,10 +35,3 @@ Route::middleware(['auth', \App\Http\Middleware\NoIndex::class])->group(function
     Route::get('/client/profile/edit', [ClientProfileController::class, 'edit']);
     Route::put('/client/profile', [ClientProfileController::class, 'update']);
 });
-
-if (app()->environment('local')) {
-    Route::get('/dev-login/{id}', function ($id) {
-        \Illuminate\Support\Facades\Auth::loginUsingId($id);
-        return redirect('/dashboard');
-    });
-}
