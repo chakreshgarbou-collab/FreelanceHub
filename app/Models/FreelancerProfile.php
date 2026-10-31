@@ -27,4 +27,12 @@ class FreelancerProfile extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function services()
+    {
+        return $this->hasMany(
+            Service::class,
+            'freelancer_profile_id',
+            'freelancer_profile_id'
+        );
+    }
 }
